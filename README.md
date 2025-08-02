@@ -2,6 +2,10 @@
 
 A modern web application built with **ASP.NET Core 9** and **Angular 19** that leverages **RabbitMQ** for asynchronous document and image processing. Users can upload files, choose transformations, and receive processed results through a clean, responsive interface.
 
+
+<img width="1240" height="927" alt="image" src="https://github.com/user-attachments/assets/32d7156c-9044-4040-870c-e53d18a0c734" />
+
+
 ## 🚀 Key Features
 
 - **Asynchronous Processing**: All file conversions happen in background workers via RabbitMQ
