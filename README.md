@@ -87,7 +87,7 @@ Processing fails → Message goes to Dead Letter Queue → Automatic retry logic
   - `ImageProcessorWorker`: Image operations using ImageSharp
 - **Models**: Strong-typed DTOs for API and message contracts
 
-### Frontend (Angular 19)
+### Frontend (Angular 20)
 - **Standalone Components**: Modern Angular architecture
 - **Reactive Forms**: File upload with dynamic form fields
 - **HTTP Client**: API communication with proper error handling
