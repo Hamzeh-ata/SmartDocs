@@ -47,17 +47,17 @@ namespace ImageConverter.Services.DocumentProcessor
                         {
                             { "x-dead-letter-exchange", "document_processing_dlx" }
                         });
-                        
+
             await _channel.BasicQosAsync(prefetchSize: 0, prefetchCount: 1, global: false, cancellationToken: stoppingToken);
 
             var consumer = new AsyncEventingBasicConsumer(_channel);
             consumer.ReceivedAsync += ProcessMessageAsync;
 
             await _channel.BasicConsumeAsync(
-          queue: "document_processing",
-          autoAck: false,
-          consumer: consumer,
-          cancellationToken: stoppingToken);
+            queue: "document_processing",
+            autoAck: false,
+            consumer: consumer,
+            cancellationToken: stoppingToken);
 
             while (!stoppingToken.IsCancellationRequested)
             {

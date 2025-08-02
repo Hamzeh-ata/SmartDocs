@@ -44,10 +44,10 @@ namespace ImageConverter.Services.ImageProcessor
                 durable: true,
                 exclusive: false,
                 autoDelete: false,
-  arguments: new Dictionary<string, object>
-                        {
-                            { "x-dead-letter-exchange", "document_processing_dlx" }
-                        },                cancellationToken: stoppingToken);
+                arguments: new Dictionary<string, object>
+                {
+                    { "x-dead-letter-exchange", "document_processing_dlx" }
+                }, cancellationToken: stoppingToken);
 
             await _channel.BasicQosAsync(prefetchSize: 0, prefetchCount: 1, global: false, cancellationToken: stoppingToken);
 

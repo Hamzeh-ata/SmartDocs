@@ -27,7 +27,6 @@ namespace ImageConverter.Services.RabbitMq
             _connection = factory.CreateConnectionAsync().GetAwaiter().GetResult();
             _channel = _connection.CreateChannelAsync().GetAwaiter().GetResult();
 
-            // NOTE: can't await in constructor, so init queues in separate async method if needed
             Task.Run(() => DeclareQueuesAsync()).GetAwaiter().GetResult();
         }
 
